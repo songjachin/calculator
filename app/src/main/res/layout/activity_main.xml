@@ -1,18 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:paddingBottom="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom|end"
+            android:lines="3"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom|end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="#3ECACA"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        //第一行取消、除、乘、清除
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_clc"
+                style="@style/btn_ce"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/btn_dev"
+                style="@style/btn_ce"
+                android:text="@string/devi" />
+
+            <Button
+                android:id="@+id/btn_mul"
+                style="@style/btn_ce"
+                android:text="@string/multi" />
+
+            <Button
+                android:id="@+id/btn_cal"
+                style="@style/btn_ce"
+                android:text="@string/cal" />
+
+        </LinearLayout>
+        //第二行7、8、9、-
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_7"
+                style="@style/btn_1"
+                android:text="@string/num7" />
+
+            <Button
+                android:id="@+id/btn_8"
+                style="@style/btn_1"
+                android:text="@string/num8" />
+
+            <Button
+                android:id="@+id/btn_9"
+                style="@style/btn_1"
+                android:text="@string/num9" />
+
+            <Button
+                android:id="@+id/btn_minus"
+                style="@style/btn_ce"
+                android:text="@string/minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_4"
+                style="@style/btn_1"
+                android:text="@string/num4" />
+
+            <Button
+                android:id="@+id/btn_5"
+                style="@style/btn_1"
+                android:text="@string/num5" />
+
+            <Button
+                android:id="@+id/btn_6"
+                style="@style/btn_1"
+                android:text="@string/num6" />
+
+            <Button
+                android:id="@+id/btn_plus"
+                style="@style/btn_ce"
+                android:text="@string/plus" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_1"
+                style="@style/btn_1"
+                android:text="@string/num1" />
+
+            <Button
+                android:id="@+id/btn_2"
+                style="@style/btn_1"
+                android:text="@string/num2" />
+
+            <Button
+                android:id="@+id/btn_3"
+                style="@style/btn_1"
+                android:text="@string/num3" />
+
+            <Button
+                android:id="@+id/btn_dot"
+                style="@style/btn_1"
+                android:text="@string/dot" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_left"
+                style="@style/btn_1"
+                android:text="@string/left" />
+
+            <Button
+                android:id="@+id/btn_0"
+                style="@style/btn_1"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btn_right"
+                style="@style/btn_1"
+                android:text="@string/right" />
+
+            <Button
+                android:id="@+id/btn_equal"
+                style="@style/btn_ce"
+                android:text="@string/equal" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
